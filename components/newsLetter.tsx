@@ -10,7 +10,6 @@ export default function NewsLetter() {
   const subscribeUser = async (e: FormEvent) => {
     e.preventDefault();
 
-    console.log("dentro de la funcion", email);
     setIsLoading(true);
     try {
       const res = await fetch("/api/subscribeUser", {
@@ -38,7 +37,6 @@ export default function NewsLetter() {
     }
   };
 
-  console.log(email);
   return (
     <div className="2xl:mx-auto 2xl:container mx-4 py-16">
       <div className="w-full relative flex items-center justify-center">
